@@ -10,10 +10,12 @@ export function CatEvent({data, pageName}) {
                     data.map
                     (
                         (ev) => (
-                            <Link className='card' key={ev.id} href={`/events/${ev.city}/${ev.id}`} passHref>
-                                <h3>{ev.title}</h3>
-                                <Image alt={ev.title} height={300} width={300} src={ev.image} />
-                            </Link>
+                            <div className='content'>
+                                <Link className='card' key={ev.id} href={`/events/${ev.city}/${ev.id}`} passHref>
+                                    <h3>{ev.title}</h3>
+                                    <Image alt={ev.title} height={300} width={300} src={ev.image} />
+                                </Link>
+                            </div>
                         )
                     )
                 }
